@@ -1,0 +1,25 @@
+section#connect{
+
+  height: 100vh;
+  min-height: 800px;
+}
+section#connect .wrap{
+
+}
+section#connect .wrap h2{
+  font-size: 118px;
+  font-weight: bold;
+  color: #00738d;
+  display: flex;
+ 
+  padding: 0 228px;
+  line-height: 160px;
+}
+
+section#connect .wrap h2.top{
+  justify-content: left; 
+}
+
+section#connect .wrap h2.bottom{
+   justify-content: right;
+}
