@@ -23,6 +23,35 @@
     <link rel="stylesheet" href="css/footer.css">
     <!-- java -->
     <script src="JS/jquery-3.7.1.min.js"></script>    
+
+    <script>
+$(document).ready(function(){
+     // 스크롤 이벤트 
+     let b=$(window).scrollTop();
+      $(window).scroll(function(){
+          // 헤더 하얀배경+검은글자        
+          if(b>$("section#p1").height()){
+            $("body header .wrap ul.menu li a").addClass("color_block");
+            $("header").addClass("whiteBG");
+          }
+          // 초음파
+          if(b>$("section#p1").height()){
+              $("section#p1 .p1_M p").addClass("text_show");
+          }
+         
+          // 우리가
+          if(b>$("section#p1 .p1_T").height()){
+                $("section#p1 .p1_M h3").addClass("slide_right").fadeIn();
+            }
+
+          if(b>$("section#p1 .p1_M").height()){
+              $("section#p1 .p1_M h3").addClass("slide_double_right");
+          }
+      });
+
+});
+
+    </script>
   </head>
   <body>
 
@@ -127,7 +156,7 @@ Water Saving Solution으로 물관리의 미래지향적<br>
   <!-- page2 -->
   <section id="p2">
     <div class="wrap">
-      <ul class="flex grid44">
+      <ul class="flex grid">
         <li>
           <div class="txt_T">
             <p class="h6 b">WORK WITH</p>
@@ -138,11 +167,13 @@ Water Saving Solution으로 물관리의 미래지향적<br>
          </div>
         </li>
         <li>
-          <a href="">
-            <img src="img/page2_1.jpg" alt="상수도">
-              <p class="h4 b">스마트 상수도</p>
-            </img>
-          </a>
+            <a href="">
+               <img src="img/page2_1.jpg" alt="상수도">
+                  <p class="h4 b">스마트 상수도</p>
+                </img>
+  
+            </a>
+            
         </li>
         <li>
           <a href="">
@@ -178,26 +209,54 @@ Water Saving Solution으로 물관리의 미래지향적<br>
     <p class="h6 b">NOTICE</p>
     <h2 class="h2 top">아이에스테크놀로지에서</h2>      
       <h2 class="h2 bottom">새로운 소식을 알려드립니다.</h2>
-    <button class="left">2023 Brochure</button>
-    <button class="right">소개 영상 바로가기</button>
+        <div>
+          <button class="left">2023 Brochure</button>
+          <button class="right">소개 영상 바로가기</button>
+        </div>
     <div class="board">
       <ul>
         <li>
-          <a href="">WETEX 및 두바이 솔라 쇼2023.. 한국 15개 기업 유치</a>
-          <p>2023-12-08</p>
+            <a href="">
+              <div>
+                <h3>WETEX 및 두바이 솔라 쇼2023.. 한국 15개 기업 유치</h3>
+                <p>2023-12-08</p>
+              </div>
+            </a>
         </li>
-        <li><a href="">매출 수출 고공행진..'물'만난 대구 물기업</a>
-        <p>2023-12-01</p></li>
-        <li><a href="">아이에스테크놀로지,2023
-          <span class="block"></span>
-          그린에너지.환경사업전서 차별화된
-          <p>2023-11-13</p>
-        </a></li>
-        <li><a href="">한국상하수도협회, 미국물환경연합
-          <span class="block"></span>
-          물산업전시회(WEFTEC) 한국ㄱ관 운영
-        <p>2023-10-20</p>
-        </a></li>
+        <li>
+          <a href="">
+            <div>
+              <h3>
+                매출 수출 고공행진..'물'만난 대구 물기업<div><span class="block"></span></div>
+              </h3>
+              <p>2023-12-01</p>
+            </div>  
+          </a>
+        </li>
+        <li>
+            <a href="">
+              <div>
+                  <h3>아이에스테크놀로지,2023
+                  <span class="block"></span>
+                  그린에너지.환경사업전서 차별화된</h3>
+                  <p>2023-11-13</p>
+             </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+              <div>
+                <h3>한국상하수도협회, 미국물환경연합
+                  <span class="block"></span>
+                  물산업전시회(WEFTEC) 한국관 운영
+                </h3>
+                <p>
+                  2023-10-20
+                </p>
+              </div>
+            </a>
+
+        </li>
       </ul>
     </div>
   </div>
