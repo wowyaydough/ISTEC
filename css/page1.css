@@ -1,7 +1,7 @@
 section#p1 {
   height: 175vh;
   min-height: 600px;
-  background-image: url(../img/page1.jpg);
+
   overflow: hidden;
   background-repeat: no-repeat;
   position: relative;
@@ -14,8 +14,22 @@ section#p1 .wrap h2{
   padding-top: 250px;
   box-sizing: border-box;
   line-height: 109px;
+  animation-name: text_left_slide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  opacity: 0;
 }
-
+@keyframes text_left_slide{
+  0%{
+    transform: translatey(0);
+    opacity: 1;
+  }
+  100%{
+    transform:translatey(30%);
+  }
+}
 section#p1 .p1_T h2 span.color{
 color:#00738d;
 }
@@ -27,21 +41,80 @@ section#p1 .p1_M{
   text-align: right;
   padding-right: 180px;
   box-sizing: border-box;
-  padding-top: 250px;
+  padding-top: 327px;
   position: relative;
+  background-image: url(../img/page1.jpg);
 }
 
 section#p1 .p1_M p{
   line-height: 35px;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  opacity: 0;
 }
 
+section#p1 .p1_M p.text_show{
+    animation-name: text_slide;
+}
+@keyframes text_slide{
+  0%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-30%);
+  }
+}
 section#p1 .p1_M h3{
-  
-  font-size: 157px;
+  font-size: 181px;
   position: absolute;
-  bottom: -127px;
-  right: 357px;
+  bottom: -147px;
+  left: 106px;
   color: #97c6d1;
+  animation-name: text_bottom-slide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  font-weight: 400;
+}
+@keyframes text_bottom-slide{
+  0%{
+    opacity: 1;
+    transform: translatex(0);
+  }
+  100%{
+    transform: translatex(30%);
+  }
+}
+section#p1 .p1_M h3.slide_right{
+  animation-name:text_slide_right; 
+  opacity: 0.8;
+    
+}
+@keyframes text_slide_right{
+  0%{
+    transform: translatex(20%);
+  }
+  100%{
+    transform: translatex(0%);
+  }
+}
+
+section#p1 .p1_M h3.slide_double_right{
+  opacity: 0.8;
+  animation-name:slide_double_right;
+}
+@keyframes slide_double_right{
+   0%{
+    transform: translatex(50%);
+  }
+  100%{
+    transform: translatex(0%);
+  }
 }
 section#p1 .p1_B{
   
@@ -62,6 +135,7 @@ section#p1 ul{
   width: 100%;
   position: absolute;
   bottom: 0;
+  background: linear-gradient(to right,#e6f5fa,#fff,#e6f5fa);
 }
 
 section#p1 ul li{
@@ -72,6 +146,7 @@ section#p1 ul li a{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 section#p1 ul li:not(:first-child) a:hover{
 animation-name: bdoor;
