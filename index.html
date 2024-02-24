@@ -22,36 +22,45 @@
     <link rel="stylesheet" href="css/page3.css">
     <link rel="stylesheet" href="css/footer.css">
     <!-- java -->
-    <script src="JS/jquery-3.7.1.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
 
-    <script>
+<!-- // 스크롤 이벤트     -->
+<script>
 $(document).ready(function(){
-     // 스크롤 이벤트 
-     let b=$(window).scrollTop();
-      $(window).scroll(function(){
+   
+  $(window).scroll(function(){
           // 헤더 하얀배경+검은글자        
-          if(b>$("section#p1").height()){
-            $("body header .wrap ul.menu li a").addClass("color_block");
+          if($("html").scrollTop()>882){
+            $("body header .wrap ul.menu li a").addClass("color_black");
             $("header").addClass("whiteBG");
           }
+          else{
+            $("body header .wrap ul.menu li a").removeClass("color_black");
+            $("header").removeClass("whiteBG");
+          }
+          console.log($(window).scrollTop());
+
           // 초음파
-          if(b>$("section#p1").height()){
+          if($(window).scrollTop()>1000){
               $("section#p1 .p1_M p").addClass("text_show");
           }
-         
-          // 우리가
-          if(b>$("section#p1 .p1_T").height()){
+          
+           // achievment
+           if($(window).scrollTop()>1380){
                 $("section#p1 .p1_M h3").addClass("slide_right").fadeIn();
             }
-
-          if(b>$("section#p1 .p1_M").height()){
+            if($(window).scrollTop()>1500){
               $("section#p1 .p1_M h3").addClass("slide_double_right");
+          }else{
+            $("section#p1 .p1_M h3").removeClass("slide_double_right");
           }
-      });
-
+          
+  });
+  
 });
+</script>
 
-    </script>
+
   </head>
   <body>
 
@@ -159,7 +168,14 @@ Water Saving Solution으로 물관리의 미래지향적<br>
       <ul class="flex grid">
         <li>
           <div class="txt_T">
-            <p class="h6 b">WORK WITH</p>
+            <p class="h6 b">W</p>
+            <p class="h6 b">O</p>
+            <p class="h6 b">R</p>
+            <p class="h6 b">K&nbsp;</p>
+            <p class="h6 b">&nbsp;W</p>
+            <p class="h6 b">I</p>
+            <p class="h6 b">T</p>
+            <p class="h6 b">H</p>
             <h2 class="h1">일류 기업으로의 도약
               <span class="block"></span>
               <strong>그 기반을 다지다</strong>
