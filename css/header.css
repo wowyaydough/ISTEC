@@ -4,21 +4,32 @@ body {
 header {
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
-header.whiteBG{
-  background-color:white;
+header.whiteBG {
+  width: 100%;
 }
-body header .wrap {
+header .wrap {
   position: fixed;
   color: white;
   align-items: center;
+  padding-bottom: 50px;
+  width: 100%;
 }
-body header .wrap h1 {
+header .wrap>a{
+  
+  position: relative;
+  left: 88px;
+}
+header.whiteBG .wrap{
+  background-color:white;
+}
+header .wrap h1 {
   font-size: 0;
 }
-body header .wrap h1::after{
-  content:"";
+header .wrap h1::after {
+  content: '';
   width: 134px;
   height: 25px;
   background-image: url(../img/logo_white.svg);
@@ -26,62 +37,59 @@ body header .wrap h1::after{
   background-size: 77%;
   display: block;
 }
-
-body header .wrap ul.menu {
+header.whiteBG .wrap h1::after{
+    background-image: url(../img/logo.svg);
+} 
+header .wrap ul.menu {
   padding-left: 418px;
   align-items: center;
 }
-body header .wrap ul.menu li {
+header .wrap ul.menu li {
   padding-right: 90px;
 }
-body header .wrap ul.menu li select{
+header .wrap ul.menu li select {
   border-radius: 30px;
   padding: 10px 22px;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
   color: white;
   font-weight: bold;
 }
 
-body header .wrap ul.menu li a {
+header .wrap ul.menu li a {
   color: white;
 }
-body header .wrap ul.menu li a:hover{
-  color:#2c7dd6;
+header .wrap ul.menu li a:hover {
+  color: #2c7dd6;
 }
-body header .wrap ul.menu li a.color_black{
-  color:black;
+header .wrap ul.menu li a.color_black {
+  color: black;
 }
 
-body header .wrap ul.menu li a.color_black:hover{
-  color:grey;
+header .wrap ul.menu li a.color_black:hover {
+  color: grey;
 }
-body header .wrap ul.menu li:nth-child(6) a{
-    width: 31px;
+header .wrap ul.menu li:nth-child(6) a {
+  width: 31px;
   height: 7px;
   border-bottom: 2px solid white;
   border-top: 2px solid white;
   display: block;
 }
-body header .wrap ul.menu li:nth-child(6) a:hover{
-    width: 31px;
+header .wrap ul.menu li:nth-child(6) a:hover {
+  width: 31px;
   height: 7px;
   border-bottom: 2px solid #2c7dd6;
   border-top: 2px solid #2c7dd6;
   display: block;
 }
-body header .wrap ul.lang {
-
+header .wrap ul.lang {
 }
-body header .wrap ul.lang li {
-
+header .wrap ul.lang li {
 }
-body header .wrap ul.lang li select {
-
+header .wrap ul.lang li select {
 }
-body header .wrap ul.lang li select option {
-
+header .wrap ul.lang li select option {
 }
-body header .wrap ul.lang a {
-
+header .wrap ul.lang a {
 }

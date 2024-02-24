@@ -1,6 +1,6 @@
 section#p2 {
 
-  height: 145vh;
+  height: 160vh;
   min-height: 600px;
 }
 section#p2 .wrap {
@@ -9,19 +9,17 @@ section#p2 .wrap {
 section#p2 .wrap ul {
 
   position: relative;
-  padding-top: 200px;
+  padding-top: 300px;
   box-sizing: border-box;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto 334px;
 }
 
 section#p2 .wrap ul li{
 overflow:hidden;  
-width: 480px;
+width: 450px;
 }
 section#p2 .wrap ul li:nth-child(1) {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
+  grid-row: 1 / span 2;
 }
 section#p2 .wrap ul li:nth-child(2) {
   grid-column: 2;
@@ -44,8 +42,7 @@ section#p2 .wrap .txt_T p{
   grid-row: 1;
 }
 section#p2 .wrap .txt_T h2{
-  line-height: 105px;
-  font-size: 57px;
+  line-height: 107px;
 }
 
 
@@ -62,12 +59,12 @@ border-radius: 50%;
 background-color: #00738d;
 
   display:block;
-  width: 145px;
-  height: 145px;
+  width: 125px;
+  height: 125px;
   position: absolute;
   z-index: 1;
-  left: 436px;
-  top: 360px;
+  left: 459px;
+  top: 406px;
 }
 section#p2 .wrap ul li:nth-last-child(2) a::after{
 content:"";
@@ -75,14 +72,14 @@ color:white;
 border-radius: 50%;
   background-image:url(../img/viewText.svg);
   display:block;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   z-index: 1;
-  left: 448px;
-  top: 372px;
+  left: 471px;
+  top: 417px;
 animation-name: circle;
-animation-duration: 10s;
+animation-duration: 20s;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
 }
@@ -92,7 +89,8 @@ animation-timing-function: linear;
   }
 }
 section#p2 .wrap ul li a img {
-  transition: 1s;
+  width: 450px;
+  transition: all 1s;
 }
 
 section#p2 .wrap ul li a img:hover{
@@ -105,9 +103,9 @@ section#p2 .wrap ul li a p{
   bottom: 30px;
   transition: all 1s;
 }
-section#p2 .wrap ul li a:hover p{
+section#p2 .wrap ul li a p:hover{
 transform: translateY(-20px);  
-  color:white; 
+  color:white;
 }  
 section#p2 .wrap ul li:nth-child(2) a p{
     left: 144px;

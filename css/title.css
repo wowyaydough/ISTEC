@@ -4,10 +4,11 @@ main {
 main section#title {
 height: 100vh;
 animation-name:bground;
-animation-duration:15s;
+animation-duration:20s;
 animation-timing-function: ease-in;
 animation-fill-mode: forwards;
 min-height: 600px;
+animation-iteration-count: infinite;
 }
 @keyframes bground{
   0%{
