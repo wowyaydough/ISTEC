@@ -1,33 +1,45 @@
 section#p2 {
-
-  height: 160vh;
+  height: 113vh;
   min-height: 600px;
 }
 section#p2 .wrap {
 
+  padding-top: 176px;
 }
-section#p2 .wrap ul {
-
+section#p2 .wrap>div>.txt_T{
+  display: flex;
+}
+section#p2 .wrap > div  h2{
+  
+  font-size: 50px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+section#p2 ul {
   position: relative;
-  padding-top: 300px;
-  box-sizing: border-box;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto auto;
 }
 
-section#p2 .wrap ul li{
+section#p2 ul li{
 overflow:hidden;  
 width: 450px;
 }
-section#p2 .wrap ul li:nth-child(1) {
-  grid-column: 1 / span 2;
+section#p2 ul li:nth-child(1) {
   grid-row: 1 / span 2;
+  height: 50%;
+  align-self: self-end;
 }
-section#p2 .wrap ul li:nth-child(2) {
+section#p2 ul li:nth-child(2) {
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 1 / span 2;
+  height: 100%;
 }
-section#p2 .wrap ul li:nth-child(3) {
+section#p2 ul li:nth-child(3) {
+  grid-row: 2;
   grid-column: 3;
-  grid-row: 2 / span 3;
+  height: 50%;
+  align-self: self-end;
 }
 section#p2 .wrap ul li:nth-child(4) {
   grid-column: 4;
@@ -35,11 +47,53 @@ section#p2 .wrap ul li:nth-child(4) {
 }
 section#p2 .wrap ul li .txt_T{
 
+  display: flex;
 }
 section#p2 .wrap .txt_T p{
   color: #00738d;
   grid-column: 1 / span 2;
   grid-row: 1;
+   animation-name: slide_right_to_left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  opacity: 0;
+  
+}
+section#p2 .wrap .txt_T p:nth-child(1){
+ 
+}
+section#p2 .wrap .txt_T p:nth-child(2){
+ animation-delay: 0.2s;
+}
+section#p2 .wrap .txt_T p:nth-child(3){
+ animation-delay: 0.4s;
+}
+section#p2 .wrap .txt_T p:nth-child(4){
+ animation-delay: 0.6s;
+}
+section#p2 .wrap .txt_T p:nth-child(5){
+ animation-delay: 0.8s;
+}
+section#p2 .wrap .txt_T p:nth-child(6){
+ animation-delay: 1s;
+}
+section#p2 .wrap .txt_T p:nth-child(7){
+ animation-delay: 1.2s;
+}
+section#p2 .wrap .txt_T p:nth-child(8){
+ animation-delay: 1.4s;
+}
+@keyframes slide_right_to_left{
+  0%{
+    transform: translatex(0%);
+    transform: translatey(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translatex(50%);
+    transform:translateY(20%);
+  }
 }
 section#p2 .wrap .txt_T h2{
   line-height: 107px;
@@ -47,24 +101,34 @@ section#p2 .wrap .txt_T h2{
 
 
 section#p2 .wrap ul li a {
-
   width: 100%;
   height: 100%;
   display: block;
+}
+section#p2 .wrap ul li:hover a{
+color:white;  
+}
+section#p2 .wrap ul li:nth-child(1) a::after{
+content:"+";
+ position: absolute;
+top: -15px;
+color: white;
+font-size: 35px;
+left: 486px;
+z-index: 2;
 }
 section#p2 .wrap ul li:nth-last-child(2) a::before{
 content:"";
 color:white;
 border-radius: 50%;
 background-color: #00738d;
-
-  display:block;
+display:block;
   width: 125px;
   height: 125px;
   position: absolute;
   z-index: 1;
-  left: 459px;
-  top: 406px;
+  left: 435px;
+  top: -54px;
 }
 section#p2 .wrap ul li:nth-last-child(2) a::after{
 content:"";
@@ -76,8 +140,8 @@ border-radius: 50%;
   height: 100px;
   position: absolute;
   z-index: 1;
-  left: 471px;
-  top: 417px;
+  left: 447px;
+  top: -42px;
 animation-name: circle;
 animation-duration: 20s;
 animation-iteration-count: infinite;
@@ -89,11 +153,10 @@ animation-timing-function: linear;
   }
 }
 section#p2 .wrap ul li a img {
-  width: 450px;
   transition: all 1s;
 }
 
-section#p2 .wrap ul li a img:hover{
+section#p2 .wrap ul li:hover a img{
    transform: scale(1.1);
 }
 
@@ -103,18 +166,17 @@ section#p2 .wrap ul li a p{
   bottom: 30px;
   transition: all 1s;
 }
-section#p2 .wrap ul li a p:hover{
+section#p2 .wrap ul li:hover a p{
 transform: translateY(-20px);  
   color:white;
 }  
+section#p2 .wrap ul li:nth-child(1) a p{
+    left: 151px;
+}
+
 section#p2 .wrap ul li:nth-child(2) a p{
-    left: 144px;
+    right: 689px;
 }
-
-
 section#p2 .wrap ul li:nth-child(3) a p{
-    left: 614px;
-}
-section#p2 .wrap ul li:nth-child(4) a p{
-    right: 176px;
+    right: 151px;
 }

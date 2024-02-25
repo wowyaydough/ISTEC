@@ -1,9 +1,11 @@
 section#connect{
 
   height: 70vh;
+  position: relative;
 }
 section#connect .wrap{
 
+  padding-top: 160px;
 }
 section#connect .wrap h2{
   font-size: 118px;
@@ -18,7 +20,34 @@ section#connect .wrap h2{
 section#connect .wrap h2.top{
   justify-content: left; 
 }
-
+section#connect .wrap h2.top::before{
+  content:"문의하기";
+  color: black;
+  font-size: 19px;
+  position: absolute;
+  right: 326px;
+}
+section#connect .wrap h2.top::after{
+  content:"";
+  display: block;
+  background-color: #00738d;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  margin-left: 162px;
+  position: absolute;
+  right: 170px;
+}
 section#connect .wrap h2.bottom{
    justify-content: right;
+}
+
+section#connect .wrap h2.bottom::after{
+  content:"";
+  background-image: url(../img/arrow.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 223px;
+  right: 234px;
 }

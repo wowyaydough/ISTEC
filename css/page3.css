@@ -7,13 +7,14 @@ section#p3 {
 section#p3 .wrap {
 
   display: grid;
-  grid-template-columns: 50% 25% auto;
+  grid-template-columns: 50% 25% 15%;
   grid-template-rows: 3% 7% 6% auto;
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
   column-gap: 15px;
   row-gap: 8px;
+  padding-top: 86px;
 }
 section#p3 .wrap>p {
 
@@ -24,15 +25,15 @@ section#p3 .wrap>p {
 section#p3 .wrap h2.top {
   grid-column: 1;
   grid-row: 2;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.5;
 }
 section#p3 .wrap h2.bottom {
   grid-column: 1;
   grid-row: 3;
   font-weight: 600;
-  font-size: 64px;
-  line-height: 2;
+  font-size: 48px;
+  line-height: 1.5;
 }
 section#p3 .wrap>div{
   
@@ -60,7 +61,8 @@ section#p3 .wrap .board {
   grid-column: 1 / span 3;
   grid-row: 4;
   width: 100%;
-  padding-top: 177px;
+  padding-top: 120px;
+  overflow: hidden;
 }
 section#p3 .wrap .board ul {
 
